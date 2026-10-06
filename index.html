@@ -50,11 +50,11 @@ button{font:inherit}
 .heroTitle{
   position:relative;z-index:3;margin:0;width:100%;
   font-family:Manrope,sans-serif;font-weight:800;text-transform:uppercase;
-  font-size:clamp(72px,11.8vw,172px);line-height:.82;letter-spacing:-.085em
+  font-size:clamp(66px,9.8vw,148px);line-height:.84;letter-spacing:-.075em
 }
-.heroTitle .row{display:block;white-space:nowrap}
-.heroTitle .row:first-child{text-align:left;padding-left:0}
-.heroTitle .row:nth-child(2){text-align:right;padding-right:0}
+ .heroTitle .row{display:block;white-space:nowrap}.heroTitle .row + .row{margin-top:.11em}
+ .heroTitle .row:first-child{text-align:center;padding-left:0}
+.heroTitle .row:nth-child(2){text-align:center;padding-right:0}
 .heroTitle .accent{color:var(--accent)}
 .media{
   position:absolute;overflow:hidden;border-radius:var(--radius);border:1px solid rgba(255,255,255,.14);
@@ -63,23 +63,23 @@ button{font:inherit}
 .media:before{content:"";position:absolute;inset:0;background:linear-gradient(140deg,rgba(255,255,255,.1),transparent 34%,rgba(0,0,0,.42))}
 .media .label{position:absolute;left:18px;bottom:16px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;z-index:2}
 .media .big{position:absolute;right:17px;top:15px;font-size:84px;font-weight:900;line-height:.8;opacity:.14;z-index:1}
-.one{width:36%;height:30%;right:0;top:4%;background:
+.one{width:31%;height:25%;right:1%;top:2%;background:
   radial-gradient(circle at 28% 28%,#f6ddbb 0 13%,transparent 14%),
   radial-gradient(circle at 58% 54%,#d9312b 0 20%,transparent 21%),
   linear-gradient(135deg,#d7b792,#3a1919 62%,#120c12)}
-.two{width:38%;height:34%;left:0;bottom:0;background:
+.two{width:32%;height:29%;left:1%;bottom:1%;background:
   radial-gradient(circle at 46% 38%,#b9c8ce 0 15%,transparent 16%),
   radial-gradient(circle at 51% 47%,#34333a 0 34%,transparent 35%),
   linear-gradient(135deg,#0c5b8f,#080c18 68%,#06070b)}
 .heroStatement{
-  position:absolute;z-index:4;left:50%;bottom:6%;transform:translateX(-50%);width:min(860px,78%);
+  position:absolute;z-index:4;left:50%;bottom:1%;transform:translateX(-50%);width:min(680px,72%);
   text-align:center;background:rgba(8,8,15,.72);border:1px solid var(--line);border-radius:999px;
-  padding:16px 22px;backdrop-filter:blur(12px)
+  padding:13px 20px;backdrop-filter:blur(12px)
 }
-.heroStatement strong{font:800 clamp(24px,2.8vw,38px)/1.05 Manrope;letter-spacing:-.045em}
+.heroStatement strong{font:800 clamp(20px,2.2vw,31px)/1.08 Manrope;letter-spacing:-.045em}
 .heroStatement span{color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.14em}
 .heroBottom{
-  display:grid;grid-template-columns:minmax(180px,.55fr) minmax(0,3fr) minmax(190px,.65fr);gap:34px;align-items:end
+  display:grid;grid-template-columns:minmax(180px,.52fr) minmax(0,3fr) minmax(190px,.62fr);gap:28px;align-items:end;margin-top:16px
 }
 .heroBottomCopy{color:var(--muted);font-size:14px;line-height:1.55;max-width:430px}
 .teamMini{border-left:1px solid var(--line);padding-left:20px;min-width:0}
@@ -89,10 +89,10 @@ button{font:inherit}
   display:flex;align-items:flex-start;justify-content:space-between;gap:0;min-width:0;width:100%;padding:6px 0 46px
 }
 .step{
-  position:relative;display:flex;flex-direction:column;gap:10px;min-width:130px;padding:0 14px
+  position:relative;display:flex;flex-direction:column;gap:10px;min-width:112px;padding:0 12px
 }
 .step .num{color:var(--muted);font-size:11px;letter-spacing:.12em}
-.step b{font-size:16px;letter-spacing:.09em;text-transform:uppercase;line-height:1}
+.step b{font-size:14px;letter-spacing:.09em;text-transform:uppercase;line-height:1}
 .step.active b,.step.active .num{color:var(--accent)}
 .step.create{padding-bottom:36px}
 .step.create .branch{
@@ -102,7 +102,7 @@ button{font:inherit}
   position:absolute;left:50%;transform:translateX(-50%);bottom:-31px;font-size:11px;letter-spacing:.12em;color:var(--fg);white-space:nowrap;text-transform:uppercase
 }
 .workflow .arrow{
-  color:var(--muted);font-size:24px;line-height:1;padding-top:21px;flex:0 0 auto
+  color:var(--muted);font-size:19px;line-height:1;padding-top:20px;flex:0 0 auto
 }
 .down{font-size:10px;letter-spacing:.13em;text-transform:uppercase;display:flex;gap:10px;align-items:center;justify-content:flex-end}.down span{color:var(--accent)}
 .section{padding:120px 0;border-top:1px solid var(--line)}
