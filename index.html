@@ -79,29 +79,31 @@ button{font:inherit}
 .heroStatement strong{font:800 clamp(24px,2.8vw,38px)/1.05 Manrope;letter-spacing:-.045em}
 .heroStatement span{color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.14em}
 .heroBottom{
-  display:grid;grid-template-columns:1fr 2.3fr auto;gap:38px;align-items:end
+  display:grid;grid-template-columns:minmax(180px,.55fr) minmax(0,3fr) minmax(190px,.65fr);gap:34px;align-items:end
 }
 .heroBottomCopy{color:var(--muted);font-size:14px;line-height:1.55;max-width:430px}
-.teamMini{border-left:1px solid var(--line);padding-left:18px}
-.teamMini b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.12em}
-.teamMini span{display:block;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.1em;margin-top:5px}
+.teamMini{border-left:1px solid var(--line);padding-left:20px;min-width:0}
+.teamMini b{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.12em}
+.teamMini span{display:block;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.1em;margin-top:7px;line-height:1.4}
 .workflow{
-  display:flex;align-items:center;justify-content:center;gap:0;min-width:0
+  display:flex;align-items:flex-start;justify-content:space-between;gap:0;min-width:0;width:100%;padding:6px 0 46px
 }
 .step{
-  position:relative;display:flex;flex-direction:column;gap:7px;min-width:112px;padding:0 12px
+  position:relative;display:flex;flex-direction:column;gap:10px;min-width:130px;padding:0 14px
 }
-.step .num{color:var(--muted);font-size:10px;letter-spacing:.1em}
-.step b{font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+.step .num{color:var(--muted);font-size:11px;letter-spacing:.12em}
+.step b{font-size:16px;letter-spacing:.09em;text-transform:uppercase;line-height:1}
 .step.active b,.step.active .num{color:var(--accent)}
-.step.create{padding-bottom:22px}
+.step.create{padding-bottom:36px}
 .step.create .branch{
-  position:absolute;left:8%;right:8%;bottom:-1px;height:16px;border:1px solid var(--line);border-bottom:0;border-radius:14px 14px 0 0
+  position:absolute;left:5%;right:5%;bottom:-1px;height:26px;border:1px solid var(--line);border-bottom:0;border-radius:20px 20px 0 0
 }
 .step.create .branch span{
-  position:absolute;left:50%;transform:translateX(-50%);bottom:-25px;font-size:9px;letter-spacing:.1em;color:var(--muted);white-space:nowrap
+  position:absolute;left:50%;transform:translateX(-50%);bottom:-31px;font-size:11px;letter-spacing:.12em;color:var(--fg);white-space:nowrap;text-transform:uppercase
 }
-.workflow .arrow{color:var(--muted);font-size:18px;padding:0 1px}
+.workflow .arrow{
+  color:var(--muted);font-size:24px;line-height:1;padding-top:21px;flex:0 0 auto
+}
 .down{font-size:10px;letter-spacing:.13em;text-transform:uppercase;display:flex;gap:10px;align-items:center;justify-content:flex-end}.down span{color:var(--accent)}
 .section{padding:120px 0;border-top:1px solid var(--line)}
 .sectionHead{display:grid;grid-template-columns:1fr .72fr;gap:70px;margin-bottom:70px}
@@ -162,7 +164,7 @@ button{font:inherit}
   .two{width:58%;height:30%;left:-3%;bottom:5%}
   .heroStatement{bottom:6%;width:min(760px,86%)}
   .heroBottom{grid-template-columns:1fr;gap:22px}
-  .workflow{justify-content:flex-start;overflow-x:auto;padding-bottom:12px;scrollbar-width:none}
+  .workflow{justify-content:flex-start;overflow-x:auto;padding:10px 0 52px;scrollbar-width:none;gap:8px}
   .workflow::-webkit-scrollbar{display:none}
   .teamMini{border-left:0;border-top:1px solid var(--line);padding:12px 0 0}
   .heroBottomCopy{max-width:600px}.down{justify-content:flex-start}
@@ -177,7 +179,7 @@ button{font:inherit}
   .one{width:57%;height:22%;right:-2%;top:10%}.two{width:63%;height:26%;bottom:7%}
   .heroStatement{bottom:6%;width:94%;padding:11px 14px}
   .heroStatement strong{font-size:19px}
-  .heroBottomCopy{font-size:12px}.step{min-width:82px;padding:0 7px}.workflow .arrow{font-size:12px}
+  .heroBottomCopy{font-size:12px}.step{min-width:108px;padding:0 8px}.step b{font-size:13px}.step .num{font-size:10px}.workflow .arrow{font-size:18px}
   .facts{grid-template-columns:1fr}.projectVisual{min-height:280px}
 }
 </style>
