@@ -118,6 +118,22 @@ button{font:inherit}
 .step .num{color:var(--muted);font-size:10px;letter-spacing:.12em}
 .step b{font-size:13px;letter-spacing:.09em;text-transform:uppercase;line-height:1}
 .step.active b,.step.active .num{color:var(--accent)}
+.step{outline:none}
+.stepInfo{
+  position:absolute;left:50%;top:48px;transform:translateX(-50%) translateY(8px);
+  width:190px;padding:12px 14px;border:1px solid rgba(246,244,239,.18);
+  border-radius:12px;background:rgba(17,17,26,.96);backdrop-filter:blur(14px);
+  color:var(--muted);font-size:10px;line-height:1.5;letter-spacing:.01em;
+  opacity:0;visibility:hidden;pointer-events:none;transition:opacity .22s ease,transform .22s ease;
+  z-index:20;box-shadow:0 18px 50px rgba(0,0,0,.32)
+}
+.stepInfo strong{
+  display:block;margin-bottom:5px;color:var(--fg);font-size:9px;
+  text-transform:uppercase;letter-spacing:.14em
+}
+.step:hover .stepInfo,.step:focus .stepInfo{
+  opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)
+}
 .step.create{padding-bottom:36px}
 .step.create .branch{
   position:absolute;left:12%;right:12%;bottom:0;height:24px;
@@ -182,9 +198,9 @@ button{font:inherit}
   .media{height:150px}
   .heroStatement{width:min(680px,88%);margin-bottom:14px}
   .heroBottom{grid-template-columns:1fr;gap:22px}
-  .workflow{display:grid;grid-template-columns:repeat(6,minmax(108px,1fr));width:100%;overflow-x:auto;overflow-y:visible;padding:6px 0 50px;scrollbar-width:none}
+  .workflow{display:grid;grid-template-columns:repeat(6,minmax(108px,1fr));width:100%;overflow-x:auto;overflow-y:visible;padding:6px 0 94px;scrollbar-width:none}
   .workflow::-webkit-scrollbar{display:none}
-  .step{min-width:108px;padding:0 8px}
+  .step{min-width:108px;padding:0 8px}.stepInfo{top:46px;width:180px}
   .step b{font-size:12px}
   .step:not(:last-child)::after{right:-1px}
   .teamMini{border-left:0;border-top:1px solid var(--line);padding:12px 0 0}
@@ -254,12 +270,12 @@ button{font:inherit}
     <div class="heroBottomCopy">Leading the creative process across design, photography, video, and post-production.</div>
 
     <div class="workflow" aria-label="Creative workflow">
-      <div class="step"><span class="num">01</span><b>Idea</b></div>
-      <div class="step"><span class="num">02</span><b>Concept</b></div>
-      <div class="step"><span class="num">03</span><b>Direction</b></div>
-      <div class="step create active"><span class="num">04</span><b>Create</b><div class="branch"><span>Design&nbsp;&nbsp;·&nbsp;&nbsp;Photography&nbsp;&nbsp;·&nbsp;&nbsp;Video</span></div></div>
-      <div class="step"><span class="num">05</span><b>Review</b></div>
-      <div class="step"><span class="num">06</span><b>Final</b></div>
+      <div class="step" tabindex="0"><span class="num">01</span><b>Idea</b><div class="stepInfo"><strong>01 / Idea</strong>Start with the brief, problem, audience, and the core thought the work needs to communicate.</div></div>
+      <div class="step" tabindex="0"><span class="num">02</span><b>Concept</b><div class="stepInfo"><strong>02 / Concept</strong>Turn the core idea into a clear creative route, visual language, and direction for the work.</div></div>
+      <div class="step" tabindex="0"><span class="num">03</span><b>Direction</b><div class="stepInfo"><strong>03 / Direction</strong>Set the visual direction and guide the team across design, photography, and video.</div></div>
+      <div class="step create active" tabindex="0"><span class="num">04</span><b>Create</b><div class="branch"><span>Design&nbsp;&nbsp;·&nbsp;&nbsp;Photography&nbsp;&nbsp;·&nbsp;&nbsp;Video</span></div><div class="stepInfo"><strong>04 / Create</strong>Bring the direction to life through design, photography, video production, and post-production.</div></div>
+      <div class="step" tabindex="0"><span class="num">05</span><b>Review</b><div class="stepInfo"><strong>05 / Review</strong>Review the execution, refine details, and make sure the final work stays true to the idea.</div></div>
+      <div class="step" tabindex="0"><span class="num">06</span><b>Final</b><div class="stepInfo"><strong>06 / Final</strong>Prepare the approved work for final delivery across the required formats and touchpoints.</div></div>
     </div>
     <div class="teamMini"><b>Multidisciplinary Team</b><span>2 Designers + 2 Video Editors</span></div>
   </div>
