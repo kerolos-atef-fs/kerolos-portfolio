@@ -162,53 +162,53 @@ button{font:inherit}
 .contactBottom p{color:var(--muted);max-width:500px;line-height:1.65}.mail{font:800 clamp(24px,3.2vw,42px) Manrope;letter-spacing:-.04em;border-bottom:1px solid var(--fg);padding-bottom:5px}
 .footer{padding:24px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.12em}
 @media(max-width:900px){
-  .wrap{width:min(var(--max),calc(100% - 32px))}.nav{grid-template-columns:1fr auto}.navlinks{display:none}
-  .navcta{padding:11px 16px} .hero{padding-top:28px}
-  .heroStage{min-height:48vh;gap:8px}
+  .wrap{width:min(var(--max),calc(100% - 32px))}
+  .nav{grid-template-columns:1fr auto}
+  .navlinks{display:none}
+  .navcta{padding:11px 16px}
+  .hero{padding-top:24px}
+  .heroStage{min-height:48vh;gap:8px;padding:4px 0 8px}
   .heroRow{grid-template-columns:55% 45%;column-gap:10px;min-height:150px}
   .heroRow.bottom{grid-template-columns:45% 55%}
-  .heroName,.heroRole{font-size:clamp(52px,10.5vw,88px)}
+  .heroName,.heroRole{font-size:clamp(52px,10.2vw,86px)}
   .heroName{padding-left:2px}.heroRole{padding-right:2px}
   .media{height:150px}
-  .one{width:100%}.two{width:100%}
   .heroStatement{width:min(680px,88%);margin-bottom:14px}
-.section{padding:84px 0}
-  .sectionHead,.aboutGrid{grid-template-columns:1fr;gap:30px}.sectionHead{margin-bottom:46px}.sectionHead h2{font-size:clamp(48px,13vw,88px)}
-  .project{grid-template-columns:1fr;gap:18px}.project:nth-child(even){direction:ltr}.projectVisual{min-height:340px}.projectCopy{padding:10px 6px 18px}
-  .facts{grid-template-columns:1fr 1fr}.services{grid-template-columns:1fr}.service:nth-child(odd){border-right:0}
-  .contactBottom{align-items:flex-start;flex-direction:column}.mail{font-size:28px}.footer{flex-direction:column;gap:7px}
-}
-@media(max-width:900px){
-  .wrap{width:min(var(--max),calc(100% - 32px))}
-  .nav{grid-template-columns:1fr auto}.navlinks{display:none}.navcta{padding:11px 16px}
-  .hero{padding-top:28px}.heroStage{min-height:60vh}
-  .heroTitle{font-size:clamp(58px,13.8vw,112px)}
-  .one{width:48%;height:24%;right:-2%;top:9%}
-  .two{width:53%;height:28%;left:-3%;bottom:6%}
-  .heroStatement{bottom:6%;width:min(760px,86%)}
   .heroBottom{grid-template-columns:1fr;gap:22px}
   .workflow{justify-content:flex-start;overflow-x:auto;padding:10px 0 52px;scrollbar-width:none;gap:8px}
   .workflow::-webkit-scrollbar{display:none}
   .teamMini{border-left:0;border-top:1px solid var(--line);padding:12px 0 0}
-  .heroBottomCopy{max-width:600px}.down{justify-content:flex-start}
-  .section{padding:84px 0}.sectionHead,.aboutGrid{grid-template-columns:1fr;gap:30px}.sectionHead{margin-bottom:46px}.sectionHead h2{font-size:clamp(48px,13vw,88px)}
-  .project{grid-template-columns:1fr;gap:18px}.project:nth-child(even){direction:ltr}.projectVisual{min-height:340px}.projectCopy{padding:10px 6px 18px}
-  .facts{grid-template-columns:1fr 1fr}.services{grid-template-columns:1fr}.service:nth-child(odd){border-right:0}
-  .contactBottom{align-items:flex-start;flex-direction:column}.mail{font-size:28px}.footer{flex-direction:column;gap:7px}
+  .heroBottomCopy{max-width:600px}
+  .down{justify-content:flex-start}
+  .section{padding:84px 0}
+  .sectionHead,.aboutGrid{grid-template-columns:1fr;gap:30px}
+  .sectionHead{margin-bottom:46px}
+  .sectionHead h2{font-size:clamp(48px,13vw,88px)}
+  .project{grid-template-columns:1fr;gap:18px}
+  .project:nth-child(even){direction:ltr}
+  .projectVisual{min-height:340px}
+  .projectCopy{padding:10px 6px 18px}
+  .facts{grid-template-columns:1fr 1fr}
+  .services{grid-template-columns:1fr}
+  .service:nth-child(odd){border-right:0}
+  .contactBottom{align-items:flex-start;flex-direction:column}
+  .mail{font-size:28px}
+  .footer{flex-direction:column;gap:7px}
 }
 @media(max-width:520px){
-  .rings{right:-25vw;top:22vh;width:100vw}.grid-bg{background-size:34px 34px}
-  .heroStage{min-height:46vh;gap:7px}
-  .heroRow{grid-template-columns:54% 46%;column-gap:6px;min-height:122px}
+  .rings{right:-25vw;top:22vh;width:100vw}
+  .grid-bg{background-size:34px 34px}
+  .heroStage{min-height:44vh;gap:6px}
+  .heroRow{grid-template-columns:54% 46%;column-gap:6px;min-height:118px}
   .heroRow.bottom{grid-template-columns:46% 54%}
-  .heroName,.heroRole{font-size:clamp(38px,10.8vw,58px);letter-spacing:-.075em}
+  .heroName,.heroRole{font-size:clamp(36px,10.5vw,56px);letter-spacing:-.075em}
   .heroName{padding-left:0}.heroRole{padding-right:0}
-  .media{height:122px;border-radius:14px}
+  .media{height:118px;border-radius:14px}
   .heroStatement{width:96%;padding:11px 14px;margin-bottom:12px}
   .heroStatement strong{font-size:15px}
-.facts{grid-template-columns:1fr}.projectVisual{min-height:280px}
-}
-</style>
+  .facts{grid-template-columns:1fr}
+  .projectVisual{min-height:280px}
+}</style>
 </head>
 <body>
 <div class="grid-bg"></div><div class="rings"></div>
