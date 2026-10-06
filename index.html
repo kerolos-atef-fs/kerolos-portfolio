@@ -96,30 +96,37 @@ button{font:inherit}
 .heroStatement strong{font:800 clamp(18px,2vw,28px)/1.08 Manrope;letter-spacing:-.045em}
 .heroStatement span{color:var(--muted);font-size:9px;text-transform:uppercase;letter-spacing:.14em}
 .heroBottom{
-  display:grid;grid-template-columns:minmax(180px,.52fr) minmax(0,3fr) minmax(190px,.62fr);gap:28px;align-items:end;margin-top:16px
+  display:grid;grid-template-columns:220px minmax(0,1fr) 220px;
+  gap:34px;align-items:start;margin-top:18px
 }
-.heroBottomCopy{color:var(--muted);font-size:14px;line-height:1.55;max-width:430px}
-.teamMini{border-left:1px solid var(--line);padding-left:20px;min-width:0}
-.teamMini b{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.12em}
-.teamMini span{display:block;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.1em;margin-top:7px;line-height:1.4}
+.heroBottomCopy{color:var(--muted);font-size:13px;line-height:1.6;max-width:200px;padding-top:2px}
+.teamMini{border-left:1px solid var(--line);padding-left:18px;min-width:0}
+.teamMini b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.12em;line-height:1.2}
+.teamMini span{display:block;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.09em;margin-top:7px;line-height:1.45}
 .workflow{
-  display:flex;align-items:flex-start;justify-content:space-between;gap:0;min-width:0;width:100%;padding:6px 0 46px
+  display:grid;grid-template-columns:repeat(6,minmax(0,1fr));
+  align-items:start;min-width:0;width:100%;padding:2px 0 50px
 }
 .step{
-  position:relative;display:flex;flex-direction:column;gap:10px;min-width:112px;padding:0 12px
+  position:relative;display:flex;flex-direction:column;gap:8px;
+  min-width:0;padding:0 13px
 }
-.step .num{color:var(--muted);font-size:11px;letter-spacing:.12em}
-.step b{font-size:14px;letter-spacing:.09em;text-transform:uppercase;line-height:1}
+.step:not(:last-child)::after{
+  content:"→";position:absolute;right:-2px;top:13px;
+  color:var(--muted);font-size:17px;line-height:1
+}
+.step .num{color:var(--muted);font-size:10px;letter-spacing:.12em}
+.step b{font-size:13px;letter-spacing:.09em;text-transform:uppercase;line-height:1}
 .step.active b,.step.active .num{color:var(--accent)}
 .step.create{padding-bottom:36px}
 .step.create .branch{
-  position:absolute;left:5%;right:5%;bottom:-1px;height:26px;border:1px solid var(--line);border-bottom:0;border-radius:20px 20px 0 0
+  position:absolute;left:12%;right:12%;bottom:0;height:24px;
+  border:1px solid var(--line);border-bottom:0;border-radius:18px 18px 0 0
 }
 .step.create .branch span{
-  position:absolute;left:50%;transform:translateX(-50%);bottom:-31px;font-size:11px;letter-spacing:.12em;color:var(--fg);white-space:nowrap;text-transform:uppercase
-}
-.workflow .arrow{
-  color:var(--muted);font-size:19px;line-height:1;padding-top:20px;flex:0 0 auto
+  position:absolute;left:50%;transform:translateX(-50%);bottom:-28px;
+  font-size:10px;letter-spacing:.12em;color:var(--fg);
+  white-space:nowrap;text-transform:uppercase
 }
 .down{font-size:10px;letter-spacing:.13em;text-transform:uppercase;display:flex;gap:10px;align-items:center;justify-content:flex-end}.down span{color:var(--accent)}
 .section{padding:120px 0;border-top:1px solid var(--line)}
@@ -175,8 +182,11 @@ button{font:inherit}
   .media{height:150px}
   .heroStatement{width:min(680px,88%);margin-bottom:14px}
   .heroBottom{grid-template-columns:1fr;gap:22px}
-  .workflow{justify-content:flex-start;overflow-x:auto;padding:10px 0 52px;scrollbar-width:none;gap:8px}
+  .workflow{display:grid;grid-template-columns:repeat(6,minmax(108px,1fr));width:100%;overflow-x:auto;overflow-y:visible;padding:6px 0 50px;scrollbar-width:none}
   .workflow::-webkit-scrollbar{display:none}
+  .step{min-width:108px;padding:0 8px}
+  .step b{font-size:12px}
+  .step:not(:last-child)::after{right:-1px}
   .teamMini{border-left:0;border-top:1px solid var(--line);padding:12px 0 0}
   .heroBottomCopy{max-width:600px}
   .down{justify-content:flex-start}
@@ -245,18 +255,12 @@ button{font:inherit}
 
     <div class="workflow" aria-label="Creative workflow">
       <div class="step"><span class="num">01</span><b>Idea</b></div>
-      <div class="arrow">→</div>
       <div class="step"><span class="num">02</span><b>Concept</b></div>
-      <div class="arrow">→</div>
       <div class="step"><span class="num">03</span><b>Direction</b></div>
-      <div class="arrow">→</div>
       <div class="step create active"><span class="num">04</span><b>Create</b><div class="branch"><span>Design&nbsp;&nbsp;·&nbsp;&nbsp;Photography&nbsp;&nbsp;·&nbsp;&nbsp;Video</span></div></div>
-      <div class="arrow">→</div>
       <div class="step"><span class="num">05</span><b>Review</b></div>
-      <div class="arrow">→</div>
       <div class="step"><span class="num">06</span><b>Final</b></div>
     </div>
-
     <div class="teamMini"><b>Multidisciplinary Team</b><span>2 Designers + 2 Video Editors</span></div>
   </div>
 </section>
