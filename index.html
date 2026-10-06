@@ -11,7 +11,8 @@
 <style>
 :root{
   --bg:#08080f;--fg:#f6f4ef;--muted:#a5a3aa;--line:rgba(246,244,239,.13);
-  --accent:#d9312b;--panel:#11111a;--max:1440px;--radius:18px;
+  --accent:#c82fd9;--accent2:#7706d8;--accent3:#7750d3;
+  --panel:#11111a;--max:1440px;--radius:18px;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -37,7 +38,7 @@ button{font:inherit}
 .logo{font-size:16px;font-weight:900;letter-spacing:.1em}.logo span{color:var(--accent)}
 .navlinks{display:flex;gap:34px;font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:#d6d4d0}
 .navlinks a{opacity:.74;transition:.25s}.navlinks a:hover{opacity:1}
-.navcta{justify-self:end;border:0;background:#a9ff19;color:#0a0a0e;border-radius:999px;padding:13px 21px;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.navcta{justify-self:end;border:0;background:linear-gradient(105deg,var(--accent),var(--accent2) 55%,var(--accent3));color:#fff;border-radius:999px;padding:13px 21px;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
 .hero{
   min-height:calc(100vh - 86px);padding:28px 0 34px;display:flex;flex-direction:column;justify-content:space-between;position:relative
 }
@@ -79,13 +80,13 @@ button{font:inherit}
 }
 .one{
   grid-column:2;background:radial-gradient(circle at 28% 28%,#f6ddbb 0 13%,transparent 14%),
-  radial-gradient(circle at 58% 54%,#d9312b 0 20%,transparent 21%),
-  linear-gradient(135deg,#d7b792,#3a1919 62%,#120c12)
+  radial-gradient(circle at 58% 54%,var(--accent) 0 20%,transparent 21%),
+  linear-gradient(135deg,#7750d3,var(--accent2) 58%,#15073e)
 }
 .two{
-  grid-column:1;background:radial-gradient(circle at 46% 38%,#b9c8ce 0 15%,transparent 16%),
-  radial-gradient(circle at 51% 47%,#34333a 0 34%,transparent 35%),
-  linear-gradient(135deg,#0c5b8f,#080c18 68%,#06070b)
+  grid-column:1;background:radial-gradient(circle at 46% 38%,#c7bdf1 0 15%,transparent 16%),
+  radial-gradient(circle at 51% 47%,#31234e 0 34%,transparent 35%),
+  linear-gradient(135deg,#2d67d8,var(--accent2) 68%,#15073e)
 }
 .heroStatement{
   position:relative;z-index:4;left:auto;bottom:auto;transform:none;
@@ -156,10 +157,10 @@ button{font:inherit}
 }
 .projectVisual:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.4),transparent 45%)}
 .projectVisual .shape{position:absolute;border-radius:50%;filter:blur(.2px)}
-.p1 .shape.a{width:52%;aspect-ratio:1;background:#ff4b31;top:-10%;right:-8%}.p1 .shape.b{width:68%;aspect-ratio:1;background:#10192c;bottom:-28%;left:-10%}
-.p2 .shape.a{width:65%;aspect-ratio:1;background:#e9ddce;top:-12%;left:-14%}.p2 .shape.b{width:48%;aspect-ratio:1;background:#d9312b;bottom:-6%;right:-8%}
-.p3 .shape.a{width:80%;height:48%;background:#c8ff27;top:20%;left:-14%;transform:rotate(-15deg);border-radius:30%}.p3 .shape.b{width:32%;aspect-ratio:1;background:#1d1934;right:8%;bottom:10%}
-.p4 .shape.a{width:62%;height:75%;background:#0b5da8;top:12%;left:-14%;transform:rotate(18deg);border-radius:40%}.p4 .shape.b{width:34%;aspect-ratio:1;background:#efc44b;right:-3%;top:8%}
+.p1 .shape.a{width:52%;aspect-ratio:1;background:var(--accent);top:-10%;right:-8%}.p1 .shape.b{width:68%;aspect-ratio:1;background:#10192c;bottom:-28%;left:-10%}
+.p2 .shape.a{width:65%;aspect-ratio:1;background:#e9ddce;top:-12%;left:-14%}.p2 .shape.b{width:48%;aspect-ratio:1;background:var(--accent2);bottom:-6%;right:-8%}
+.p3 .shape.a{width:80%;height:48%;background:linear-gradient(135deg,var(--accent),var(--accent2));top:20%;left:-14%;transform:rotate(-15deg);border-radius:30%}.p3 .shape.b{width:32%;aspect-ratio:1;background:#1d1934;right:8%;bottom:10%}
+.p4 .shape.a{width:62%;height:75%;background:#3e66d8;top:12%;left:-14%;transform:rotate(18deg);border-radius:40%}.p4 .shape.b{width:34%;aspect-ratio:1;background:var(--accent);right:-3%;top:8%}
 .projectVisual .tag{position:absolute;left:18px;top:16px;z-index:2;text-transform:uppercase;letter-spacing:.15em;font-size:10px}
 .projectVisual .index{position:absolute;right:18px;bottom:16px;z-index:2;font-size:11px;letter-spacing:.1em}
 .projectCopy{display:flex;flex-direction:column;justify-content:flex-end;padding:16px 18px 24px}
