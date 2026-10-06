@@ -38,35 +38,71 @@ button{font:inherit}
 .navlinks{display:flex;gap:34px;font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:#d6d4d0}
 .navlinks a{opacity:.74;transition:.25s}.navlinks a:hover{opacity:1}
 .navcta{justify-self:end;border:0;background:#a9ff19;color:#0a0a0e;border-radius:999px;padding:13px 21px;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
-.hero{min-height:calc(100vh - 86px);padding:54px 0 64px;display:flex;flex-direction:column;justify-content:space-between}
-.meta{display:flex;justify-content:space-between;gap:20px;text-transform:uppercase;letter-spacing:.17em;font-size:10px;color:var(--muted)}
-.heroStage{position:relative;min-height:70vh;display:grid;align-items:center}
+.hero{
+  min-height:calc(100vh - 86px);padding:34px 0 42px;display:flex;flex-direction:column;justify-content:space-between;position:relative
+}
+.meta{
+  display:flex;justify-content:space-between;gap:20px;text-transform:uppercase;letter-spacing:.17em;font-size:10px;color:var(--muted)
+}
+.heroStage{
+  position:relative;min-height:66vh;display:flex;align-items:center;justify-content:center;overflow:visible
+}
 .heroTitle{
-  position:relative;z-index:2;margin:0;
+  position:relative;z-index:3;margin:0;width:100%;
   font-family:Manrope,sans-serif;font-weight:800;text-transform:uppercase;
-  font-size:clamp(78px,14.2vw,205px);line-height:.8;letter-spacing:-.085em;
+  font-size:clamp(82px,14vw,204px);line-height:.78;letter-spacing:-.09em
 }
 .heroTitle .row{display:block;white-space:nowrap}
-.heroTitle .indent{padding-left:24vw}
+.heroTitle .row:first-child{text-align:left;padding-left:0}
+.heroTitle .row:nth-child(2){text-align:right;padding-right:0}
 .heroTitle .accent{color:var(--accent)}
 .media{
   position:absolute;overflow:hidden;border-radius:var(--radius);border:1px solid rgba(255,255,255,.14);
-  box-shadow:0 24px 70px rgba(0,0,0,.35);transform-style:preserve-3d
+  box-shadow:0 24px 70px rgba(0,0,0,.4);transform-style:preserve-3d;z-index:2
 }
-.media:before{content:"";position:absolute;inset:0;background:linear-gradient(140deg,rgba(255,255,255,.08),transparent 35%,rgba(0,0,0,.34))}
+.media:before{content:"";position:absolute;inset:0;background:linear-gradient(140deg,rgba(255,255,255,.1),transparent 34%,rgba(0,0,0,.42))}
 .media .label{position:absolute;left:18px;bottom:16px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;z-index:2}
 .media .big{position:absolute;right:17px;top:15px;font-size:84px;font-weight:900;line-height:.8;opacity:.14;z-index:1}
-.one{width:39%;height:33%;right:0;top:4%;background:
-  radial-gradient(circle at 30% 35%,#ffad31 0 18%,transparent 19%),
-  radial-gradient(circle at 62% 62%,#ff433c 0 23%,transparent 24%),
-  linear-gradient(135deg,#efb74f,#7e201d 72%,#251017)}
-.two{width:42%;height:40%;left:0;bottom:1%;background:
-  radial-gradient(circle at 48% 40%,#f2e9df 0 20%,transparent 21%),
-  radial-gradient(circle at 52% 43%,#d9bba2 0 36%,transparent 37%),
-  linear-gradient(135deg,#1876c9,#0c1c34 70%,#06070b)}
-.heroFoot{display:flex;justify-content:space-between;align-items:end;gap:20px}
-.heroFoot p{margin:0;color:var(--muted);max-width:550px;font-size:15px;line-height:1.7}
-.down{font-size:12px;letter-spacing:.13em;text-transform:uppercase;display:flex;gap:10px;align-items:center}.down span{color:var(--accent)}
+.one{width:34%;height:29%;right:1%;top:5%;background:
+  radial-gradient(circle at 28% 28%,#f6ddbb 0 13%,transparent 14%),
+  radial-gradient(circle at 58% 54%,#d9312b 0 20%,transparent 21%),
+  linear-gradient(135deg,#d7b792,#3a1919 62%,#120c12)}
+.two{width:36%;height:34%;left:0;bottom:0;background:
+  radial-gradient(circle at 46% 38%,#b9c8ce 0 15%,transparent 16%),
+  radial-gradient(circle at 51% 47%,#34333a 0 34%,transparent 35%),
+  linear-gradient(135deg,#0c5b8f,#080c18 68%,#06070b)}
+.heroStatement{
+  position:absolute;z-index:4;left:50%;bottom:9%;transform:translateX(-50%);width:min(700px,72%);
+  text-align:center;background:rgba(8,8,15,.72);border:1px solid var(--line);border-radius:999px;
+  padding:13px 18px;backdrop-filter:blur(12px)
+}
+.heroStatement strong{font:800 clamp(18px,2vw,28px)/1.1 Manrope;letter-spacing:-.045em}
+.heroStatement span{color:var(--muted);font-size:9px;text-transform:uppercase;letter-spacing:.14em}
+.heroBottom{
+  display:grid;grid-template-columns:1fr 1.7fr auto;gap:32px;align-items:end
+}
+.heroBottomCopy{color:var(--muted);font-size:13px;line-height:1.55;max-width:430px}
+.teamMini{border-left:1px solid var(--line);padding-left:18px}
+.teamMini b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.12em}
+.teamMini span{display:block;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.1em;margin-top:5px}
+.workflow{
+  display:flex;align-items:center;justify-content:center;gap:0;min-width:0
+}
+.step{
+  position:relative;display:flex;flex-direction:column;gap:5px;min-width:92px;padding:0 10px
+}
+.step .num{color:var(--muted);font-size:9px;letter-spacing:.1em}
+.step b{font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.step.active b,.step.active .num{color:var(--accent)}
+.step.create{padding-bottom:22px}
+.step.create .branch{
+  position:absolute;left:8%;right:8%;bottom:-1px;height:16px;border:1px solid var(--line);border-bottom:0;border-radius:14px 14px 0 0
+}
+.step.create .branch span{
+  position:absolute;left:50%;transform:translateX(-50%);bottom:-25px;font-size:9px;letter-spacing:.1em;color:var(--muted);white-space:nowrap
+}
+.workflow .arrow{color:var(--muted);font-size:14px;padding:0 1px}
+.down{font-size:10px;letter-spacing:.13em;text-transform:uppercase;display:flex;gap:10px;align-items:center;justify-content:flex-end}.down span{color:var(--accent)}
 .section{padding:120px 0;border-top:1px solid var(--line)}
 .sectionHead{display:grid;grid-template-columns:1fr .72fr;gap:70px;margin-bottom:70px}
 .eyebrow{text-transform:uppercase;letter-spacing:.16em;color:var(--muted);font-size:10px}
@@ -117,10 +153,31 @@ button{font:inherit}
   .facts{grid-template-columns:1fr 1fr}.services{grid-template-columns:1fr}.service:nth-child(odd){border-right:0}
   .contactBottom{align-items:flex-start;flex-direction:column}.mail{font-size:28px}.footer{flex-direction:column;gap:7px}
 }
+@media(max-width:900px){
+  .wrap{width:min(var(--max),calc(100% - 32px))}
+  .nav{grid-template-columns:1fr auto}.navlinks{display:none}.navcta{padding:11px 16px}
+  .hero{padding-top:28px}.heroStage{min-height:57vh}
+  .heroTitle{font-size:clamp(58px,15vw,120px)}
+  .one{width:49%;height:25%;right:-1%;top:8%}
+  .two{width:53%;height:28%;left:-2%;bottom:5%}
+  .heroStatement{bottom:7%;width:min(620px,82%)}
+  .heroBottom{grid-template-columns:1fr;gap:22px}
+  .workflow{justify-content:flex-start;overflow-x:auto;padding-bottom:12px;scrollbar-width:none}
+  .workflow::-webkit-scrollbar{display:none}
+  .teamMini{border-left:0;border-top:1px solid var(--line);padding:12px 0 0}
+  .heroBottomCopy{max-width:600px}.down{justify-content:flex-start}
+  .section{padding:84px 0}.sectionHead,.aboutGrid{grid-template-columns:1fr;gap:30px}.sectionHead{margin-bottom:46px}.sectionHead h2{font-size:clamp(48px,13vw,88px)}
+  .project{grid-template-columns:1fr;gap:18px}.project:nth-child(even){direction:ltr}.projectVisual{min-height:340px}.projectCopy{padding:10px 6px 18px}
+  .facts{grid-template-columns:1fr 1fr}.services{grid-template-columns:1fr}.service:nth-child(odd){border-right:0}
+  .contactBottom{align-items:flex-start;flex-direction:column}.mail{font-size:28px}.footer{flex-direction:column;gap:7px}
+}
 @media(max-width:520px){
   .rings{right:-25vw;top:22vh;width:100vw}.grid-bg{background-size:34px 34px}
-  .heroStage{min-height:54vh}.heroTitle{font-size:clamp(52px,17vw,82px)}
-  .one{width:59%;height:24%;right:-2%}.two{width:65%;height:29%}
+  .heroStage{min-height:53vh}.heroTitle{font-size:clamp(48px,15.8vw,82px)}
+  .one{width:57%;height:22%;right:-2%;top:10%}.two{width:63%;height:26%;bottom:7%}
+  .heroStatement{bottom:6%;width:94%;padding:11px 14px}
+  .heroStatement strong{font-size:16px}
+  .heroBottomCopy{font-size:12px}.step{min-width:82px;padding:0 7px}.workflow .arrow{font-size:12px}
   .facts{grid-template-columns:1fr}.projectVisual{min-height:280px}
 }
 </style>
@@ -137,12 +194,41 @@ button{font:inherit}
 <main>
 <section class="hero wrap">
   <div class="meta"><span>Art Director / Egypt</span><span>Independent Portfolio / 2026</span></div>
+
   <div class="heroStage">
-    <div class="media one"><span class="label">Project 01 / Visual Identity</span><span class="big">01</span></div>
-    <div class="media two"><span class="label">Project 02 / Campaign</span><span class="big">02</span></div>
-    <h1 class="heroTitle"><span class="row">BUILT <span class="accent">FOR</span></span><span class="row indent">IMPACT.</span></h1>
+    <div class="media one"><span class="label">Visual direction / 01</span><span class="big">01</span></div>
+    <div class="media two"><span class="label">Production / 02</span><span class="big">02</span></div>
+
+    <h1 class="heroTitle">
+      <span class="row">KEROLOS <span class="accent">/</span></span>
+      <span class="row">ART DIRECTOR</span>
+    </h1>
+
+    <div class="heroStatement">
+      <span>Creative direction</span><br>
+      <strong>I direct ideas from concept to final.</strong>
+    </div>
   </div>
-  <div class="heroFoot"><p>I turn ideas into strong visual systems — from art direction and branding to campaigns, social content, and creative team leadership.</p><div class="down">Scroll to explore <span>↓</span></div></div>
+
+  <div class="heroBottom">
+    <div class="heroBottomCopy">Leading the creative process across design, photography, video, and post-production.</div>
+
+    <div class="workflow" aria-label="Creative workflow">
+      <div class="step"><span class="num">01</span><b>Idea</b></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="num">02</span><b>Concept</b></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="num">03</span><b>Direction</b></div>
+      <div class="arrow">→</div>
+      <div class="step create active"><span class="num">04</span><b>Create</b><div class="branch"><span>Design&nbsp;&nbsp;·&nbsp;&nbsp;Photography&nbsp;&nbsp;·&nbsp;&nbsp;Video</span></div></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="num">05</span><b>Review</b></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="num">06</span><b>Final</b></div>
+    </div>
+
+    <div class="teamMini"><b>Multidisciplinary Team</b><span>2 Designers + 2 Video Editors</span></div>
+  </div>
 </section>
 
 <section id="work" class="section wrap">
