@@ -117,7 +117,7 @@ button{font:inherit}
 }
 .step .num{color:var(--muted);font-size:10px;letter-spacing:.12em}
 .step b{font-size:13px;letter-spacing:.09em;text-transform:uppercase;line-height:1}
-.step.active b,.step.active .num{color:inherit}.step:hover b,.step:hover .num,.step:focus b,.step:focus .num{color:var(--accent)}
+.step.active b,.step.active .num{color:inherit}
 .step{outline:none}
 .stepInfo{
   position:absolute;left:50%;top:48px;transform:translateX(-50%) translateY(8px);
@@ -137,12 +137,17 @@ button{font:inherit}
 .step.create{padding-bottom:36px}
 .step.create .branch{
   position:absolute;left:12%;right:12%;bottom:0;height:24px;
-  border:1px solid var(--line);border-bottom:0;border-radius:18px 18px 0 0
+  border:1px solid var(--line);border-bottom:0;border-radius:18px 18px 0 0;
+  opacity:0;visibility:hidden;transform:translateY(6px);
+  transition:opacity .22s ease,transform .22s ease,visibility .22s ease
 }
 .step.create .branch span{
   position:absolute;left:50%;transform:translateX(-50%);bottom:-28px;
   font-size:10px;letter-spacing:.12em;color:var(--fg);
   white-space:nowrap;text-transform:uppercase
+}
+.step.create:hover .branch,.step.create:focus .branch{
+  opacity:1;visibility:visible;transform:translateY(0)
 }
 .down{font-size:10px;letter-spacing:.13em;text-transform:uppercase;display:flex;gap:10px;align-items:center;justify-content:flex-end}.down span{color:var(--accent)}
 .section{padding:120px 0;border-top:1px solid var(--line)}
