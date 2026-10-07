@@ -5,7 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta name="description" content="Kerolos — Art Director portfolio">
 <title>Kerolos — Art Director</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">\n<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#08080f;--fg:#f6f4ef;--muted:#a5a3aa;--line:rgba(246,244,239,.13);
@@ -64,7 +66,7 @@ button{font:inherit}
 .heroName,.heroRole{
   position:relative;z-index:3;margin:0;font-family:Cairo,sans-serif;
   font-weight:800;text-transform:uppercase;white-space:nowrap;
-  font-size:clamp(66px,8.1vw,124px);line-height:.84;letter-spacing:-.08em
+  font-size:clamp(66px,8.1vw,124px);line-height:.84;letter-spacing:-.03em
 }
 .heroName{justify-self:start;padding-left:12px}.heroDot{color:var(--accent);display:inline-block;margin:0 .08em}
 .heroRole{justify-self:end;padding-right:8px}
@@ -101,7 +103,7 @@ button{font:inherit}
   text-align:center;background:rgba(8,8,15,.72);border:1px solid var(--line);border-radius:999px;
   padding:10px 18px;backdrop-filter:blur(12px)
 }
-.heroStatement strong{font:800 clamp(18px,2vw,28px)/1.08 Cairo;letter-spacing:-.045em}
+.heroStatement strong{font:800 clamp(18px,2vw,28px)/1.08 Cairo;letter-spacing:-.01em}
 .heroStatement span{color:var(--muted);font-size:9px;text-transform:uppercase;letter-spacing:.14em}
 .heroBottom{
   display:grid;grid-template-columns:220px minmax(0,1fr) 220px;
@@ -152,7 +154,7 @@ button{font:inherit}
 .section{padding:120px 0;border-top:1px solid var(--line)}
 .sectionHead{display:grid;grid-template-columns:1fr .72fr;gap:70px;margin-bottom:70px}
 .eyebrow{text-transform:uppercase;letter-spacing:.16em;color:var(--muted);font-size:10px}
-.sectionHead h2{font-family:Cairo;font-size:clamp(52px,7vw,110px);line-height:.82;letter-spacing:-.08em;margin:16px 0 0;text-transform:uppercase}
+.sectionHead h2{font-family:Cairo;font-size:clamp(52px,7vw,110px);line-height:.82;letter-spacing:-.03em;margin:16px 0 0;text-transform:uppercase}
 .sectionHead p{align-self:end;color:var(--muted);font-size:15px;line-height:1.7;max-width:520px}
 .projects{display:grid;gap:26px}
 .project{
@@ -171,22 +173,22 @@ button{font:inherit}
 .projectVisual .tag{position:absolute;left:18px;top:16px;z-index:2;text-transform:uppercase;letter-spacing:.15em;font-size:10px}
 .projectVisual .index{position:absolute;right:18px;bottom:16px;z-index:2;font-size:11px;letter-spacing:.1em}
 .projectCopy{display:flex;flex-direction:column;justify-content:flex-end;padding:16px 18px 24px}
-.projectCopy h3{font-family:Cairo;font-size:clamp(42px,5vw,80px);line-height:.84;letter-spacing:-.075em;text-transform:uppercase;margin:0 0 22px}
+.projectCopy h3{font-family:Cairo;font-size:clamp(42px,5vw,80px);line-height:.84;letter-spacing:-.03em;text-transform:uppercase;margin:0 0 22px}
 .projectCopy p{color:var(--muted);max-width:440px;line-height:1.7;margin:0 0 20px}
 .pills{display:flex;flex-wrap:wrap;gap:8px}.pill{padding:8px 11px;border:1px solid var(--line);border-radius:999px;text-transform:uppercase;font-size:9px;letter-spacing:.1em;color:#d9d6d0}
 .aboutGrid{display:grid;grid-template-columns:.72fr 1.28fr;gap:100px}
-.aboutBig{font-family:Cairo;font-size:clamp(50px,6.2vw,92px);line-height:.88;letter-spacing:-.08em;text-transform:uppercase}
+.aboutBig{font-family:Cairo;font-size:clamp(50px,6.2vw,92px);line-height:.88;letter-spacing:-.03em;text-transform:uppercase}
 .aboutText{font-size:21px;line-height:1.65;color:#dbd9d4;max-width:780px}
 .aboutText p{margin:0 0 26px}.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:50px}
 .fact{border-top:1px solid var(--line);padding-top:13px}.fact b{display:block;font:800 26px/1 Cairo;margin-bottom:7px}.fact span{text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-size:9px}
 .services{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line)}
 .service{min-height:220px;padding:27px 20px;border-bottom:1px solid var(--line)}.service:nth-child(odd){border-right:1px solid var(--line)}
-.service .n{color:var(--accent);font-size:11px}.service h3{font:800 30px/1 Cairo;letter-spacing:-.05em;text-transform:uppercase;margin:52px 0 10px}.service p{max-width:470px;color:var(--muted);margin:0;line-height:1.65}
+.service .n{color:var(--accent);font-size:11px}.service h3{font:800 30px/1 Cairo;letter-spacing:-.02em;text-transform:uppercase;margin:52px 0 10px}.service p{max-width:470px;color:var(--muted);margin:0;line-height:1.65}
 .contact{min-height:75vh;display:flex;flex-direction:column;justify-content:space-between}
-.contact h2{font:800 clamp(70px,12vw,190px)/.78 Cairo;letter-spacing:-.09em;text-transform:uppercase;margin:18px 0 0}
+.contact h2{font:800 clamp(70px,12vw,190px)/.78 Cairo;letter-spacing:-.03em;text-transform:uppercase;margin:18px 0 0}
 .contact h2 span{color:var(--accent)}
 .contactBottom{display:flex;justify-content:space-between;align-items:end;gap:20px}
-.contactBottom p{color:var(--muted);max-width:500px;line-height:1.65}.mail{font:800 clamp(24px,3.2vw,42px) Cairo;letter-spacing:-.04em;border-bottom:1px solid var(--fg);padding-bottom:5px}
+.contactBottom p{color:var(--muted);max-width:500px;line-height:1.65}.mail{font:800 clamp(24px,3.2vw,42px) Cairo;letter-spacing:-.01em;border-bottom:1px solid var(--fg);padding-bottom:5px}
 .footer{padding:24px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.12em}
 @media(max-width:900px){
   .wrap{width:min(var(--max),calc(100% - 32px))}
@@ -232,7 +234,7 @@ button{font:inherit}
   .heroStage{min-height:44vh;gap:6px}
   .heroRow{grid-template-columns:54% 46%;column-gap:6px;min-height:118px}
   .heroRow.bottom{grid-template-columns:46% 54%}
-  .heroName,.heroRole{font-size:clamp(36px,10.5vw,56px);letter-spacing:-.075em}
+  .heroName,.heroRole{font-size:clamp(36px,10.5vw,56px);letter-spacing:-.03em}
   .heroName{padding-left:0}.heroRole{padding-right:0}
   .media{height:118px;border-radius:14px}
   .heroStatement{width:96%;padding:11px 14px;margin-bottom:12px}
