@@ -291,6 +291,40 @@ button{font:inherit}
 @media(max-width:900px){.edgeGrid{grid-template-columns:1fr 1fr}.edgeCard:last-child{grid-column:1/-1}.edgeCard:last-child .edgeArt{height:250px}.edgeBody h3{font-size:36px}}
 @media(max-width:600px){.edgeGrid{grid-template-columns:1fr}.edgeCard:last-child{grid-column:auto}.edgeArt{height:205px}.edgeCard:last-child .edgeArt{height:205px}.edgeBody{padding:22px}}
 
+
+/* TEAM MANAGEMENT */
+.teamTools{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px}
+.toolPanel{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:20px;padding:24px;background:linear-gradient(145deg,rgba(255,255,255,.035),rgba(255,255,255,.008));min-width:0}
+.toolPanel.jira{grid-column:span 7;background:radial-gradient(ellipse at 100% 0,rgba(119,6,216,.19),transparent 50%),var(--panel)}
+.toolPanel.calendar{grid-column:span 5}
+.toolPanel.workflowPanel{grid-column:span 5}
+.toolPanel.reviewPanel{grid-column:span 7}
+.toolHead{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:25px}
+.toolIcon{width:44px;height:44px;border:1px solid var(--line);border-radius:13px;display:grid;place-items:center;font-size:19px;font-weight:800;color:#fff;background:rgba(200,47,217,.12)}
+.toolType{font-size:9px;text-transform:uppercase;letter-spacing:.15em;color:var(--muted)}
+.toolPanel h3{font-size:clamp(27px,3.2vw,42px);line-height:.92;letter-spacing:-.04em;text-transform:uppercase;margin:0 0 13px}
+.toolPanel p{color:var(--muted);font-size:12px;line-height:1.75;margin:0 0 20px;max-width:580px}
+.toolTags{display:flex;gap:7px;flex-wrap:wrap}.toolTags span{border:1px solid var(--line);border-radius:999px;padding:6px 9px;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:#d9d6e0}
+.boardMock{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px;margin-top:20px}
+.boardCol{padding:8px;background:rgba(0,0,0,.19);border:1px solid var(--line);border-radius:9px;min-width:0}
+.boardCol small{display:block;font-size:8px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:9px}
+.taskMini{height:29px;border-radius:5px;background:linear-gradient(100deg,rgba(200,47,217,.35),rgba(119,6,216,.16));border:1px solid rgba(200,47,217,.18);margin-top:6px}
+.taskMini:nth-child(3){width:72%;background:rgba(255,255,255,.07);border-color:var(--line)}
+.calendarMock{display:grid;grid-template-columns:repeat(7,1fr);gap:5px;margin-top:20px}
+.calendarMock span{display:grid;place-items:center;aspect-ratio:1;border:1px solid var(--line);border-radius:6px;color:var(--muted);font-size:9px}
+.calendarMock span.post{background:rgba(200,47,217,.2);border-color:rgba(200,47,217,.42);color:white}
+.workflowSteps{display:grid;gap:0;margin-top:20px}
+.workflowSteps div{display:flex;align-items:center;gap:12px;border-top:1px solid var(--line);padding:10px 0;font-size:11px;text-transform:uppercase;letter-spacing:.08em}
+.workflowSteps b{font-size:9px;color:var(--accent);width:24px}
+.workflowSteps span{margin-left:auto;color:var(--muted);font-size:9px}
+.reviewItems{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:20px}
+.reviewItem{padding:13px;border:1px solid var(--line);border-radius:10px;font-size:11px}
+.reviewItem b{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:5px}
+.reviewItem span{color:var(--muted);font-size:10px;line-height:1.5}
+.teamFootnote{color:var(--muted);font-size:10px;line-height:1.6;margin-top:20px}
+@media(max-width:800px){.toolPanel.jira,.toolPanel.calendar,.toolPanel.workflowPanel,.toolPanel.reviewPanel{grid-column:span 12}.boardCol small{font-size:7px}}
+@media(max-width:500px){.toolPanel{padding:18px}.boardMock{gap:4px}.boardCol{padding:5px}.boardCol small{letter-spacing:0}.reviewItems{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
@@ -298,7 +332,7 @@ button{font:inherit}
 
 <header class="nav wrap">
   <a class="logo" href="#">KERO<span>.</span></a>
-  <nav class="navlinks"><a href="#work">Work</a><a href="#logofolio">Logofolio</a><a href="#services">Services</a><a href="#creative-edge">Beyond Visuals</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+  <nav class="navlinks"><a href="#work">Work</a><a href="#logofolio">Logofolio</a><a href="#services">Services</a><a href="#creative-edge">Beyond Visuals</a><a href="#team-management">Team Ops</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
   <a class="navcta" href="#contact">Work With Me</a>
 </header>
 
@@ -439,6 +473,43 @@ button{font:inherit}
       <div class="edgeBody"><div class="eyebrow">Design / Storyboard / Post</div><h3>Design Meets<br>Motion</h3><p>Keeping one visual idea connected across static design and video—from the first frame and storyboard to editing, finishing, and final delivery.</p><div class="pills"><span class="pill">Storyboarding</span><span class="pill">Video Direction</span><span class="pill">Post-production</span></div></div>
     </article>
   </div>
+</section>
+
+<section id="team-management" class="section wrap">
+  <div class="sectionHead">
+    <div><div class="eyebrow">05 / Team Operations</div><h2>Creative<br>team,<br>in sync.</h2></div>
+    <p>Good creative work needs a clear process. I organize briefs, priorities, feedback, and delivery so designers and video editors can move in the same direction.</p>
+  </div>
+  <div class="teamTools">
+    <article class="toolPanel jira">
+      <div class="toolHead"><div><div class="toolType">Task & Project Management</div><h3 style="margin-top:8px">Jira<br>Workflow</h3></div><div class="toolIcon">J</div></div>
+      <p>Turn briefs into trackable tasks with clear ownership, deadlines, priorities, status, and review notes. Keep design and video work visible from start to delivery.</p>
+      <div class="toolTags"><span>Briefs</span><span>Assignees</span><span>Deadlines</span><span>Priorities</span></div>
+      <div class="boardMock" aria-label="Illustrative task board">
+        <div class="boardCol"><small>To do</small><div class="taskMini"></div><div class="taskMini"></div></div>
+        <div class="boardCol"><small>In progress</small><div class="taskMini"></div></div>
+        <div class="boardCol"><small>Review</small><div class="taskMini"></div><div class="taskMini"></div></div>
+        <div class="boardCol"><small>Done</small><div class="taskMini"></div></div>
+      </div>
+    </article>
+    <article class="toolPanel calendar">
+      <div class="toolHead"><div><div class="toolType">Planning & Publishing</div><h3 style="margin-top:8px">Content<br>Calendar</h3></div><div class="toolIcon">▦</div></div>
+      <p>Use a shared Google Sheets calendar to map content ideas, platforms, formats, references, and delivery dates before production starts.</p>
+      <div class="toolTags"><span>Google Sheets</span><span>Content Planning</span></div>
+      <div class="calendarMock" aria-label="Illustrative content calendar"><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span><span>1</span><span class="post">2</span><span>3</span><span>4</span><span class="post">5</span><span>6</span><span>7</span><span>8</span><span>9</span><span class="post">10</span><span>11</span><span>12</span><span class="post">13</span><span>14</span></div>
+    </article>
+    <article class="toolPanel workflowPanel">
+      <div class="toolHead"><div><div class="toolType">From Brief to Delivery</div><h3 style="margin-top:8px">Clear<br>Workflow</h3></div><div class="toolIcon">↗</div></div>
+      <p>A shared production path gives every team member clarity on what happens next and when creative review is needed.</p>
+      <div class="workflowSteps"><div><b>01</b>Brief & Idea<span>Define</span></div><div><b>02</b>Concept & Direction<span>Align</span></div><div><b>03</b>Design / Video<span>Create</span></div><div><b>04</b>Art Direction Review<span>Refine</span></div><div><b>05</b>Approval & Delivery<span>Finish</span></div></div>
+    </article>
+    <article class="toolPanel reviewPanel">
+      <div class="toolHead"><div><div class="toolType">Feedback & Quality Control</div><h3 style="margin-top:8px">Review with<br>Purpose.</h3></div><div class="toolIcon">✓</div></div>
+      <p>Keep feedback actionable and consistent. Each review should clarify what needs to change, why it matters, who owns the next step, and when it is due.</p>
+      <div class="reviewItems"><div class="reviewItem"><b>Creative Feedback</b><span>Concept, hierarchy, composition, typography, and brand consistency.</span></div><div class="reviewItem"><b>Production Check</b><span>Formats, file quality, naming, export settings, and final assets.</span></div><div class="reviewItem"><b>Team Ownership</b><span>One clear assignee and a defined next action for every task.</span></div><div class="reviewItem"><b>Delivery Readiness</b><span>Final approval and all required assets ready for handoff.</span></div></div>
+    </article>
+  </div>
+  <p class="teamFootnote">Illustrative workflow and UI visuals — not live Jira or Google Sheets integrations.</p>
 </section>
 
 <section id="contact" class="section wrap contact">
