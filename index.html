@@ -385,6 +385,13 @@ body{background:var(--bg)}
 .logoTile:before{background:radial-gradient(circle at 50% 50%,rgba(22,140,255,.15),transparent 65%)}
 .stepInfo{background:rgba(10,14,22,.97)}
 
+
+/* Project cover image */
+.projectVisual.has-cover .projectCover{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block;z-index:0;transition:transform .6s ease}
+.projectVisual.has-cover:hover .projectCover{transform:scale(1.035)}
+.projectVisual.has-cover:after{z-index:1}
+.projectVisual.has-cover .tag,.projectVisual.has-cover .index{z-index:2}
+
 </style>
 </head>
 <body>
@@ -456,7 +463,7 @@ body{background:var(--bg)}
   </div>
   <div class="projects">
     <article class="project">
-      <div class="projectVisual p1"><div class="shape a"></div><div class="shape b"></div><span class="tag">01 / Visual Identity</span><span class="index">Brand Systems</span></div>
+      <div class="projectVisual p1 has-cover"><img class="projectCover" src="assets/Neon%20Gradient%20Brand%20Guidelines%20Mockup.png" alt="Abstract neon gradient brand identity presentation" loading="lazy"><span class="tag">01 / Visual Identity</span><span class="index">Brand Systems</span></div>
       <div class="projectCopy"><h3>Visual<br>Identity</h3><p>Identity systems designed to stay sharp across social media, digital touchpoints, and campaign executions.</p><div class="pills"><span class="pill">Branding</span><span class="pill">Art Direction</span><span class="pill">Visual System</span></div></div>
     </article>
     <article class="project">
