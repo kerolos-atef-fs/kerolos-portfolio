@@ -10,9 +10,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#08080f;--fg:#f6f4ef;--muted:#a5a3aa;--line:rgba(246,244,239,.13);
-  --accent:#c82fd9;--accent2:#7706d8;--accent3:#7750d3;
-  --panel:#11111a;--max:1440px;--radius:18px;
+  --bg:#05070a;--fg:#f7f8fb;--muted:#a7abb5;--line:rgba(247,248,251,.14);
+  --accent:#168cff;--accent2:#00c9c0;--accent3:#ff4d24;
+  --panel:#0b1018;--max:1440px;--radius:18px;
 }
 *{box-sizing:border-box}
 html,body,body *{font-family:Cairo,system-ui,sans-serif !important}
@@ -354,6 +354,36 @@ button{font:inherit}
  #logofolio .sectionHead{grid-template-columns:1fr;gap:18px;margin-bottom:34px}
  #logofolio .sectionHead p{font-size:13px;max-width:560px}
 }
+
+
+/* COLOR DIRECTION — inspired by electric blue, teal, and warm coral light */
+body{background:var(--bg)}
+.grid-bg{
+ background-image:linear-gradient(rgba(247,248,251,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(247,248,251,.055) 1px,transparent 1px);
+}
+.rings,.rings:before,.rings:after{border-color:rgba(247,248,251,.065)}
+.nav{background:rgba(5,7,10,.86)}
+.navcta{background:linear-gradient(105deg,#168cff 0%,#00c9c0 55%,#ff4d24 100%)}
+.one{
+ background:radial-gradient(circle at 20% 70%,rgba(22,140,255,.95),transparent 38%),
+ radial-gradient(circle at 80% 80%,rgba(0,201,192,.72),transparent 38%),
+ linear-gradient(135deg,#080d1a,#08070d 58%,#281016)
+}
+.two{
+ background:radial-gradient(circle at 25% 75%,rgba(22,140,255,.8),transparent 40%),
+ radial-gradient(circle at 80% 70%,rgba(255,77,36,.72),transparent 42%),
+ linear-gradient(135deg,#090b12,#08070c 62%,#17101b)
+}
+.p1 .shape.a{background:#168cff}
+.p1 .shape.b{background:#101923}
+.p2 .shape.a{background:#e7eaf0}
+.p2 .shape.b{background:#00aeb0}
+.p3 .shape.a{background:linear-gradient(135deg,#168cff,#00c9c0)}
+.p3 .shape.b{background:#101923}
+.p4 .shape.a{background:#ff4d24}
+.p4 .shape.b{background:#168cff}
+.logoTile:before{background:radial-gradient(circle at 50% 50%,rgba(22,140,255,.15),transparent 65%)}
+.stepInfo{background:rgba(10,14,22,.97)}
 
 </style>
 </head>
