@@ -241,14 +241,31 @@ button{font:inherit}
   .heroStatement strong{font-size:15px}
   .facts{grid-template-columns:1fr}
   .projectVisual{min-height:280px}
-}</style>
+}
+/* LOGOFOLIO */
+.logoGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.logoTile{min-height:180px;display:flex;align-items:center;justify-content:center;padding:28px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);position:relative;overflow:hidden;transition:background .3s ease}
+.logoTile:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(200,47,217,.13),transparent 65%);opacity:0;transition:opacity .3s ease}
+.logoTile:hover{background:rgba(255,255,255,.025)}
+.logoTile:hover:before{opacity:1}
+.logoMark{position:relative;z-index:1;color:#fff;max-width:100%;max-height:76px;width:auto;height:auto;object-fit:contain;filter:grayscale(1) brightness(0) invert(1);transition:transform .3s ease;opacity:.94}
+.logoTile:hover .logoMark{transform:scale(1.06);opacity:1}
+.logoWordmark{position:relative;z-index:1;color:#fff;font-size:clamp(18px,2.4vw,34px);font-weight:800;letter-spacing:.04em;text-align:center;line-height:1.05;text-transform:uppercase}
+.logoWordmark.serif{font-family:Georgia,serif!important;font-weight:500;letter-spacing:.12em}
+.logoWordmark.tight{letter-spacing:-.06em;font-weight:900}
+.logoTile small{position:absolute;left:12px;bottom:10px;color:var(--muted);font-size:8px;letter-spacing:.14em;text-transform:uppercase;opacity:0;transition:opacity .25s}
+.logoTile:hover small{opacity:1}
+@media(max-width:900px){.logoGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.logoTile{min-height:150px}}
+@media(max-width:520px){.logoTile{min-height:120px;padding:18px}.logoWordmark{font-size:clamp(16px,5vw,24px)}}
+
+</style>
 </head>
 <body>
 <div class="grid-bg"></div><div class="rings"></div>
 
 <header class="nav wrap">
   <a class="logo" href="#">KERO<span>.</span></a>
-  <nav class="navlinks"><a href="#work">Work</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+  <nav class="navlinks"><a href="#work">Work</a><a href="#logofolio">Logofolio</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
   <a class="navcta" href="#contact">Work With Me</a>
 </header>
 
@@ -310,6 +327,24 @@ button{font:inherit}
       <div class="projectVisual p4"><div class="shape a"></div><div class="shape b"></div><span class="tag">04 / Travel</span><span class="index">International</span></div>
       <div class="projectCopy"><h3>Travel &<br>Mobility</h3><p>Visual storytelling for international audiences across travel, immigration, and mobility-focused campaigns.</p><div class="pills"><span class="pill">Storytelling</span><span class="pill">Campaigns</span><span class="pill">Social</span></div></div>
     </article>
+  </div>
+</section>
+
+
+<section id="logofolio" class="section wrap">
+  <div class="sectionHead">
+    <div><div class="eyebrow">02 / Selected Marks</div><h2>Logo<br>folio.</h2></div>
+    <p>A focused collection of logo work. Each mark is shown in white to keep the section quiet, consistent, and typography-led.</p>
+  </div>
+  <div class="logoGrid" aria-label="Logofolio logo grid">
+    <div class="logoTile"><span class="logoWordmark tight">KERO.</span></div>
+    <div class="logoTile"><span class="logoWordmark serif">ATELIER</span></div>
+    <div class="logoTile"><span class="logoWordmark">NORTH<br>STUDIO</span></div>
+    <div class="logoTile"><span class="logoWordmark tight">FORM/</span></div>
+    <div class="logoTile"><span class="logoWordmark serif">MONO</span></div>
+    <div class="logoTile"><span class="logoWordmark">OBJECT<br>01</span></div>
+    <div class="logoTile"><span class="logoWordmark tight">LEVEL</span></div>
+    <div class="logoTile"><span class="logoWordmark serif">ORIGIN</span></div>
   </div>
 </section>
 
