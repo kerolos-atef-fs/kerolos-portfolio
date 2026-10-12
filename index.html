@@ -344,6 +344,17 @@ button{font:inherit}
 @media(max-width:900px){.toolStack{grid-template-columns:repeat(2,minmax(0,1fr))}.stackFlow{flex-wrap:wrap}.stackFlowStep{flex-basis:35%}}
 @media(max-width:520px){.toolStack{grid-template-columns:1fr}.stackCard{min-height:220px}.stackFlow{align-items:stretch;padding:17px}.stackFlowStep{flex-basis:40%}.stackArrow{display:none}}
 
+
+/* LOGOFOLIO SECTION HEADER REFINEMENT */
+#logofolio .sectionHead{grid-template-columns:1fr 1fr;align-items:end;gap:48px;margin-bottom:52px}
+#logofolio .sectionHead>div{min-width:0}
+#logofolio .sectionHead .eyebrow{font-size:10px;letter-spacing:.18em}
+#logofolio .sectionHead p{align-self:end;max-width:470px;margin:0 0 2px;font-size:14px;line-height:1.8}
+@media(max-width:700px){
+ #logofolio .sectionHead{grid-template-columns:1fr;gap:18px;margin-bottom:34px}
+ #logofolio .sectionHead p{font-size:13px;max-width:560px}
+}
+
 </style>
 </head>
 <body>
