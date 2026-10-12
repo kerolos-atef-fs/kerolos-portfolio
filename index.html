@@ -325,6 +325,25 @@ button{font:inherit}
 @media(max-width:800px){.toolPanel.jira,.toolPanel.calendar,.toolPanel.workflowPanel,.toolPanel.reviewPanel{grid-column:span 12}.boardCol small{font-size:7px}}
 @media(max-width:500px){.toolPanel{padding:18px}.boardMock{gap:4px}.boardCol{padding:5px}.boardCol small{letter-spacing:0}.reviewItems{grid-template-columns:1fr}}
 
+
+/* CREATIVE TOOLSTACK */
+.toolStack{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.stackCard{border:1px solid var(--line);border-radius:18px;padding:22px;min-width:0;background:linear-gradient(155deg,rgba(255,255,255,.04),rgba(255,255,255,.008));display:flex;flex-direction:column;min-height:260px}
+.stackTop{display:flex;justify-content:space-between;align-items:center;margin-bottom:25px}
+.stackLogo{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;font-size:18px;font-weight:900;color:#fff;background:rgba(200,47,217,.13);border:1px solid var(--line)}
+.stackRole{font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-align:right}
+.stackCard h3{font-size:25px;letter-spacing:-.035em;line-height:1;text-transform:uppercase;margin:0 0 12px}
+.stackCard p{font-size:12px;line-height:1.7;color:var(--muted);margin:0 0 18px}
+.stackUse{margin-top:auto;display:flex;flex-wrap:wrap;gap:6px}
+.stackUse span{font-size:8px;text-transform:uppercase;letter-spacing:.08em;padding:6px 8px;border:1px solid var(--line);border-radius:999px}
+.stackFlow{margin-top:28px;padding:24px;border:1px solid var(--line);border-radius:18px;display:flex;align-items:center;justify-content:space-between;gap:12px;background:rgba(255,255,255,.015)}
+.stackFlowStep{flex:1;text-align:center;min-width:0}
+.stackFlowStep b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.08em}
+.stackFlowStep small{display:block;color:var(--muted);font-size:9px;margin-top:5px}
+.stackArrow{color:var(--accent);font-size:18px}
+@media(max-width:900px){.toolStack{grid-template-columns:repeat(2,minmax(0,1fr))}.stackFlow{flex-wrap:wrap}.stackFlowStep{flex-basis:35%}}
+@media(max-width:520px){.toolStack{grid-template-columns:1fr}.stackCard{min-height:220px}.stackFlow{align-items:stretch;padding:17px}.stackFlowStep{flex-basis:40%}.stackArrow{display:none}}
+
 </style>
 </head>
 <body>
@@ -477,39 +496,22 @@ button{font:inherit}
 
 <section id="team-management" class="section wrap">
   <div class="sectionHead">
-    <div><div class="eyebrow">05 / Team Operations</div><h2>Creative<br>team,<br>in sync.</h2></div>
-    <p>Good creative work needs a clear process. I organize briefs, priorities, feedback, and delivery so designers and video editors can move in the same direction.</p>
+    <div><div class="eyebrow">05 / Creative Operations</div><h2>Tools for<br>the team.</h2></div>
+    <p>A practical toolstack for planning, creating, organizing, and delivering creative work. Each tool has a clear role in the process—from the first brief to the final approved asset.</p>
   </div>
-  <div class="teamTools">
-    <article class="toolPanel jira">
-      <div class="toolHead"><div><div class="toolType">Task & Project Management</div><h3 style="margin-top:8px">Jira<br>Workflow</h3></div><div class="toolIcon">J</div></div>
-      <p>Turn briefs into trackable tasks with clear ownership, deadlines, priorities, status, and review notes. Keep design and video work visible from start to delivery.</p>
-      <div class="toolTags"><span>Briefs</span><span>Assignees</span><span>Deadlines</span><span>Priorities</span></div>
-      <div class="boardMock" aria-label="Illustrative task board">
-        <div class="boardCol"><small>To do</small><div class="taskMini"></div><div class="taskMini"></div></div>
-        <div class="boardCol"><small>In progress</small><div class="taskMini"></div></div>
-        <div class="boardCol"><small>Review</small><div class="taskMini"></div><div class="taskMini"></div></div>
-        <div class="boardCol"><small>Done</small><div class="taskMini"></div></div>
-      </div>
-    </article>
-    <article class="toolPanel calendar">
-      <div class="toolHead"><div><div class="toolType">Planning & Publishing</div><h3 style="margin-top:8px">Content<br>Calendar</h3></div><div class="toolIcon">▦</div></div>
-      <p>Use a shared Google Sheets calendar to map content ideas, platforms, formats, references, and delivery dates before production starts.</p>
-      <div class="toolTags"><span>Google Sheets</span><span>Content Planning</span></div>
-      <div class="calendarMock" aria-label="Illustrative content calendar"><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span><span>1</span><span class="post">2</span><span>3</span><span>4</span><span class="post">5</span><span>6</span><span>7</span><span>8</span><span>9</span><span class="post">10</span><span>11</span><span>12</span><span class="post">13</span><span>14</span></div>
-    </article>
-    <article class="toolPanel workflowPanel">
-      <div class="toolHead"><div><div class="toolType">From Brief to Delivery</div><h3 style="margin-top:8px">Clear<br>Workflow</h3></div><div class="toolIcon">↗</div></div>
-      <p>A shared production path gives every team member clarity on what happens next and when creative review is needed.</p>
-      <div class="workflowSteps"><div><b>01</b>Brief & Idea<span>Define</span></div><div><b>02</b>Concept & Direction<span>Align</span></div><div><b>03</b>Design / Video<span>Create</span></div><div><b>04</b>Art Direction Review<span>Refine</span></div><div><b>05</b>Approval & Delivery<span>Finish</span></div></div>
-    </article>
-    <article class="toolPanel reviewPanel">
-      <div class="toolHead"><div><div class="toolType">Feedback & Quality Control</div><h3 style="margin-top:8px">Review with<br>Purpose.</h3></div><div class="toolIcon">✓</div></div>
-      <p>Keep feedback actionable and consistent. Each review should clarify what needs to change, why it matters, who owns the next step, and when it is due.</p>
-      <div class="reviewItems"><div class="reviewItem"><b>Creative Feedback</b><span>Concept, hierarchy, composition, typography, and brand consistency.</span></div><div class="reviewItem"><b>Production Check</b><span>Formats, file quality, naming, export settings, and final assets.</span></div><div class="reviewItem"><b>Team Ownership</b><span>One clear assignee and a defined next action for every task.</span></div><div class="reviewItem"><b>Delivery Readiness</b><span>Final approval and all required assets ready for handoff.</span></div></div>
-    </article>
+  <div class="toolStack">
+    <article class="stackCard"><div class="stackTop"><div class="stackLogo">J</div><span class="stackRole">Plan & Track</span></div><h3>Jira</h3><p>Turn briefs into trackable tasks, assign ownership, set priorities and due dates, and follow progress through review and delivery.</p><div class="stackUse"><span>Task Management</span><span>Deadlines</span><span>Reviews</span></div></article>
+    <article class="stackCard"><div class="stackTop"><div class="stackLogo">N</div><span class="stackRole">Document & Organize</span></div><h3>Notion</h3><p>Keep creative briefs, brand guidelines, meeting notes, reference libraries, and team documentation in one organized workspace.</p><div class="stackUse"><span>Knowledge Base</span><span>Briefs</span><span>Documentation</span></div></article>
+    <article class="stackCard"><div class="stackTop"><div class="stackLogo">✳</div><span class="stackRole">Think & Develop</span></div><h3>ChatGPT</h3><p>Support brainstorming, campaign angles, brief refinement, content structures, feedback writing, and first-draft documentation.</p><div class="stackUse"><span>Ideation</span><span>Briefs</span><span>Workflow Support</span></div></article>
+    <article class="stackCard"><div class="stackTop"><div class="stackLogo">✦</div><span class="stackRole">Explore & Build</span></div><h3>Claude</h3><p>Work through long documents, compare creative routes, structure project information, and assist with code or prototypes when needed.</p><div class="stackUse"><span>Analysis</span><span>Long Documents</span><span>Prototyping</span></div></article>
   </div>
-  <p class="teamFootnote">Illustrative workflow and UI visuals — not live Jira or Google Sheets integrations.</p>
+  <div class="stackFlow" aria-label="Illustrative creative team tool workflow">
+    <div class="stackFlowStep"><b>ChatGPT</b><small>Explore the idea</small></div><span class="stackArrow">→</span>
+    <div class="stackFlowStep"><b>Claude</b><small>Develop & structure</small></div><span class="stackArrow">→</span>
+    <div class="stackFlowStep"><b>Notion</b><small>Document the brief</small></div><span class="stackArrow">→</span>
+    <div class="stackFlowStep"><b>Jira</b><small>Assign & deliver</small></div>
+  </div>
+  <p class="teamFootnote">This section describes a suggested tool workflow; it does not claim that these apps are connected or automatically synced.</p>
 </section>
 
 <section id="contact" class="section wrap contact">
