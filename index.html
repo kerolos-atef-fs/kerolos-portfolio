@@ -258,6 +258,39 @@ button{font:inherit}
 @media(max-width:900px){.logoGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.logoTile{min-height:150px}}
 @media(max-width:520px){.logoTile{min-height:120px;padding:18px}.logoWordmark{font-size:clamp(16px,5vw,24px)}}
 
+
+/* CREATIVE EDGE — AI, IMPACT, MOTION */
+.edgeGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.edgeCard{min-width:0;border:1px solid var(--line);border-radius:22px;overflow:hidden;background:linear-gradient(160deg,rgba(255,255,255,.035),rgba(255,255,255,.008));display:flex;flex-direction:column}
+.edgeTop{display:flex;align-items:center;justify-content:space-between;padding:17px 19px 0;color:var(--muted);font-size:10px;letter-spacing:.14em}
+.edgeIcon{width:32px;height:32px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;color:var(--fg);font-size:16px}
+.edgeArt{height:220px;position:relative;overflow:hidden;margin:18px 14px 0;border:1px solid rgba(255,255,255,.12);border-radius:14px;display:flex;align-items:center;justify-content:center}
+.aiArt{gap:9px;background:radial-gradient(circle at 50% 45%,rgba(200,47,217,.35),transparent 48%),#11101a}
+.aiArt span{font-size:8px;letter-spacing:.16em;color:var(--muted);z-index:2}
+.aiArt b{font-size:64px;line-height:1;font-weight:800;letter-spacing:-.08em;z-index:2;background:linear-gradient(135deg,#fff,var(--accent));color:transparent;background-clip:text}
+.aiArt i{width:35px;height:1px;background:var(--accent);display:block}
+.aiArt:before,.aiArt:after{content:"";position:absolute;border:1px solid rgba(200,47,217,.28);border-radius:50%;width:165px;aspect-ratio:1}
+.aiArt:after{width:115px;border-color:rgba(255,255,255,.12)}
+.impactArt{align-items:flex-start;justify-content:flex-end;flex-direction:column;gap:12px;padding:24px;background:linear-gradient(145deg,#21132e,#15131d 60%,#342047)}
+.impactArt span{position:relative;z-index:2;font-size:9px;letter-spacing:.16em;text-transform:uppercase}
+.impactLine{position:absolute;inset:0;background:linear-gradient(135deg,transparent 44%,rgba(200,47,217,.4) 44.3%,transparent 44.8%),linear-gradient(160deg,transparent 56%,rgba(119,6,216,.5) 56.3%,transparent 56.8%)}
+.motionArt{background:#111019}
+.motionFrame{position:absolute;inset:18px;border:1px solid rgba(255,255,255,.35);padding:15px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;background:linear-gradient(125deg,rgba(119,6,216,.42),rgba(200,47,217,.08))}
+.motionFrame:after{content:"";position:absolute;width:175px;aspect-ratio:1;border-radius:50%;background:linear-gradient(135deg,#e7c6db,#9a3fbc);right:-45px;top:-45px;opacity:.75}
+.motionFrame span,.motionFrame small{position:relative;z-index:2;font-size:8px;letter-spacing:.14em;color:#d9d4e0}
+.motionFrame b{position:relative;z-index:2;font-size:clamp(25px,3vw,42px);line-height:.82;letter-spacing:-.06em}
+.motionFrame i{position:absolute;width:130%;height:1px;background:#fff8;transform:rotate(-25deg);left:-10%;top:54%}
+.edgeBody{padding:24px;display:flex;flex-direction:column;align-items:flex-start;flex:1}
+.edgeBody h3{font-size:clamp(29px,3vw,42px);line-height:.9;letter-spacing:-.04em;text-transform:uppercase;margin:14px 0}
+.edgeBody p{color:var(--muted);font-size:13px;line-height:1.75;margin:0 0 20px}
+.edgeBody .pills{margin-top:auto}
+.impactList{display:grid;gap:10px;width:100%;margin:0 0 14px}
+.impactList span{font-size:11px;display:flex;gap:10px;align-items:center;border-top:1px solid var(--line);padding-top:9px}
+.impactList b{color:var(--accent);font-size:9px;letter-spacing:.1em}
+.edgeFoot{font-size:9px;line-height:1.5;color:var(--muted);margin-top:auto;padding-top:12px}
+@media(max-width:900px){.edgeGrid{grid-template-columns:1fr 1fr}.edgeCard:last-child{grid-column:1/-1}.edgeCard:last-child .edgeArt{height:250px}.edgeBody h3{font-size:36px}}
+@media(max-width:600px){.edgeGrid{grid-template-columns:1fr}.edgeCard:last-child{grid-column:auto}.edgeArt{height:205px}.edgeCard:last-child .edgeArt{height:205px}.edgeBody{padding:22px}}
+
 </style>
 </head>
 <body>
@@ -265,7 +298,7 @@ button{font:inherit}
 
 <header class="nav wrap">
   <a class="logo" href="#">KERO<span>.</span></a>
-  <nav class="navlinks"><a href="#work">Work</a><a href="#logofolio">Logofolio</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+  <nav class="navlinks"><a href="#work">Work</a><a href="#logofolio">Logofolio</a><a href="#services">Services</a><a href="#creative-edge">Beyond Visuals</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
   <a class="navcta" href="#contact">Work With Me</a>
 </header>
 
@@ -381,6 +414,30 @@ button{font:inherit}
     <div class="service"><span class="n">04</span><h3>Social Design</h3><p>Scalable content systems that stay recognizable across formats and platforms.</p></div>
     <div class="service"><span class="n">05</span><h3>Campaign Development</h3><p>Key visuals, creative routes, and design direction built around one strong idea.</p></div>
     <div class="service"><span class="n">06</span><h3>Team Leadership</h3><p>Briefing, review, prioritization, and quality control across creative production.</p></div>
+  </div>
+</section>
+
+<section id="creative-edge" class="section wrap">
+  <div class="sectionHead">
+    <div><div class="eyebrow">04 / Beyond the Visual</div><h2>How I<br>make it<br>matter.</h2></div>
+    <p>Creative work is more than a final frame. It is the thinking, collaboration, and production choices that turn an idea into a consistent experience.</p>
+  </div>
+  <div class="edgeGrid">
+    <article class="edgeCard edgeAI">
+      <div class="edgeTop"><span class="edgeNum">01</span><span class="edgeIcon">✳</span></div>
+      <div class="edgeArt aiArt" aria-hidden="true"><span>IDEA</span><i></i><b>AI</b><i></i><span>VISUAL</span></div>
+      <div class="edgeBody"><div class="eyebrow">Explore / Experiment / Refine</div><h3>AI in My<br>Workflow</h3><p>Using AI tools as part of visual exploration: testing directions, building references, and accelerating early-stage ideas while keeping creative judgment and art direction at the center.</p><div class="pills"><span class="pill">Visual Exploration</span><span class="pill">Prompt Craft</span><span class="pill">Creative Control</span></div></div>
+    </article>
+    <article class="edgeCard edgeImpact">
+      <div class="edgeTop"><span class="edgeNum">02</span><span class="edgeIcon">↗</span></div>
+      <div class="edgeArt impactArt" aria-hidden="true"><div class="impactLine"></div><span>IDEA</span><span>CONSISTENCY</span><span>DELIVERY</span></div>
+      <div class="edgeBody"><div class="eyebrow">Clarity / Consistency / Delivery</div><h3>Creative<br>Impact</h3><p>Good direction should make the work clearer and the process more consistent. I focus on aligning the brief, visual system, team execution, and final delivery.</p><div class="impactList"><span><b>01</b> Clearer creative direction</span><span><b>02</b> Consistent brand execution</span><span><b>03</b> More organized production</span></div><small class="edgeFoot">Project results and performance metrics can be added when verified.</small></div>
+    </article>
+    <article class="edgeCard edgeMotion">
+      <div class="edgeTop"><span class="edgeNum">03</span><span class="edgeIcon">▶</span></div>
+      <div class="edgeArt motionArt" aria-hidden="true"><div class="motionFrame"><span>FRAME 01</span><b>MOVE<br>WITH<br>MEANING.</b><i></i><small>FRAME 02 — FINAL</small></div></div>
+      <div class="edgeBody"><div class="eyebrow">Design / Storyboard / Post</div><h3>Design Meets<br>Motion</h3><p>Keeping one visual idea connected across static design and video—from the first frame and storyboard to editing, finishing, and final delivery.</p><div class="pills"><span class="pill">Storyboarding</span><span class="pill">Video Direction</span><span class="pill">Post-production</span></div></div>
+    </article>
   </div>
 </section>
 
